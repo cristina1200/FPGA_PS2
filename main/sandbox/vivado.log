@@ -1,0 +1,52 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Jul  4 10:12:28 2023
+# Process ID: 6560
+# Current directory: C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/sandbox
+# Command line: vivado.exe -mode batch -source C:\Users\Asus/logisim_evolution_workspace\MouseProject_modif\main\scripts\\vivadoLoadBitStream.tcl
+# Log file: C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/sandbox/vivado.log
+# Journal file: C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/sandbox\vivado.jou
+# Running On: Asus-CrHome, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8467 MB
+#-----------------------------------------------------------
+source {C:\Users\Asus/logisim_evolution_workspace\MouseProject_modif\main\scripts\\vivadoLoadBitStream.tcl}
+# open_hw
+WARNING: 'open_hw' is deprecated, please use 'open_hw_manager' instead.
+open_hw_manager: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 396.332 ; gain = 64.141
+# connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:18:10
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-02:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2023 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 421.180 ; gain = 24.848
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183B31923A
+# set_property PROGRAM.FILE {C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/sandbox//vp/vp.runs/impl_1/logisimTopLevelShell.bit} [lindex [get_hw_devices] 0]
+# current_hw_device [lindex [get_hw_devices] 0]
+# refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+refresh_hw_device: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2616.840 ; gain = 2194.402
+# program_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+# close_hw
+WARNING: 'close_hw' is deprecated, please use 'close_hw_manager' instead.
+# exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  4 10:12:52 2023...

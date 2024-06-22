@@ -1,0 +1,261 @@
+
+*** Running vivado
+    with args -log logisimTopLevelShell.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source logisimTopLevelShell.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source logisimTopLevelShell.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 394.562 ; gain = 68.719
+Command: synth_design -top logisimTopLevelShell -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6020
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1201.996 ; gain = 407.410
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'logisimTopLevelShell' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/toplevel/logisimTopLevelShell_behavior.vhd:11]
+INFO: [Synth 8-3491] module 'main' declared at 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_entity.vhd:17' bound to instance 'CIRCUIT_0' of component 'main' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/toplevel/logisimTopLevelShell_behavior.vhd:65]
+INFO: [Synth 8-638] synthesizing module 'main' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_behavior.vhd:11]
+INFO: [Synth 8-3491] module 'control_unit' declared at 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/control_unit_entity.vhd:17' bound to instance 'control_unit_1' of component 'control_unit' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_behavior.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'control_unit' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/control_unit_behavior.vhd:18]
+WARNING: [Synth 8-614] signal 'NUMBER' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/control_unit_behavior.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'control_unit' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/control_unit_behavior.vhd:18]
+INFO: [Synth 8-3491] module 'frequency_divider' declared at 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/frequency_divider_entity.vhd:17' bound to instance 'frequency_divider_1' of component 'frequency_divider' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_behavior.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'frequency_divider' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/frequency_divider_behavior.vhd:18]
+WARNING: [Synth 8-614] signal 'RESET' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/frequency_divider_behavior.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'frequency_divider' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/frequency_divider_behavior.vhd:18]
+INFO: [Synth 8-3491] module 'ssd' declared at 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_entity.vhd:17' bound to instance 'ssd_1' of component 'ssd' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_behavior.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'ssd' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:21]
+INFO: [Synth 8-3491] module 'CONVERTOR' declared at 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:106' bound to instance 'C1' of component 'CONVERTOR' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:36]
+INFO: [Synth 8-638] synthesizing module 'CONVERTOR' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:117]
+WARNING: [Synth 8-614] signal 'A1' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:126]
+WARNING: [Synth 8-614] signal 'A2' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:126]
+WARNING: [Synth 8-614] signal 'A3' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:126]
+WARNING: [Synth 8-614] signal 'A4' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:126]
+INFO: [Synth 8-256] done synthesizing module 'CONVERTOR' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:117]
+INFO: [Synth 8-226] default block is never used [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:47]
+WARNING: [Synth 8-614] signal 'D4' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:45]
+WARNING: [Synth 8-614] signal 'D3' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:45]
+WARNING: [Synth 8-614] signal 'D2' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:45]
+WARNING: [Synth 8-614] signal 'D1' is read in the process but is not in the sensitivity list [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:45]
+INFO: [Synth 8-256] done synthesizing module 'ssd' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ssd_behavior.vhd:21]
+INFO: [Synth 8-3491] module 'ps2_interface' declared at 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ps2_interface_entity.vhd:17' bound to instance 'ps2_interface_1' of component 'ps2_interface' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_behavior.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'ps2_interface' [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ps2_interface_behavior.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'ps2_interface' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/ps2_interface_behavior.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'main' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/circuit/main_behavior.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'logisimTopLevelShell' (0#1) [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/vhdl/toplevel/logisimTopLevelShell_behavior.vhd:11]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1293.043 ; gain = 498.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.043 ; gain = 498.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1293.043 ; gain = 498.457
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1293.043 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/xdc/vivadoConstraints.xdc]
+Finished Parsing XDC File [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/xdc/vivadoConstraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/xdc/vivadoConstraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/logisimTopLevelShell_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/logisimTopLevelShell_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1366.309 ; gain = 0.000
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               43 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 3     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    54|
+|3     |LUT1   |    37|
+|4     |LUT2   |    78|
+|5     |LUT3   |    32|
+|6     |LUT4   |    45|
+|7     |LUT5   |    36|
+|8     |LUT6   |    77|
+|9     |FDCE   |    81|
+|10    |FDRE   |     7|
+|11    |IBUF   |     5|
+|12    |OBUF   |    12|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:32 . Memory (MB): peak = 1366.309 ; gain = 498.457
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 1366.309 ; gain = 571.723
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1366.309 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 54 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.309 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9153d50
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 11 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 1366.309 ; gain = 971.746
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Asus/logisim_evolution_workspace/MouseProject_modif/main/sandbox/vp/vp.runs/synth_1/logisimTopLevelShell.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file logisimTopLevelShell_utilization_synth.rpt -pb logisimTopLevelShell_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  4 10:10:44 2023...

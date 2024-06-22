@@ -1,0 +1,1191 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Tue Jul  4 10:12:06 2023
+| Host         : Asus-CrHome running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -max_paths 10 -report_unconstrained -file logisimTopLevelShell_timing_summary_routed.rpt -pb logisimTopLevelShell_timing_summary_routed.pb -rpx logisimTopLevelShell_timing_summary_routed.rpx -warn_on_violation
+| Design       : logisimTopLevelShell
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+Rule       Severity          Description                   Violations  
+---------  ----------------  ----------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell   88          
+LUTAR-1    Warning           LUT drives async reset alert  1           
+
+Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (88)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (187)
+5. checking no_input_delay (3)
+6. checking no_output_delay (12)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (88)
+-------------------------
+ There are 37 register/latch pins with no clock driven by root clock pin: CLK_0 (HIGH)
+
+ There are 49 register/latch pins with no clock driven by root clock pin: PS_CLK_0 (HIGH)
+
+ There are 2 register/latch pins with no clock driven by root clock pin: CIRCUIT_0/frequency_divider_1/nr_reg[15]/Q (HIGH)
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (187)
+--------------------------------------------------
+ There are 187 pins that are not constrained for maximum delay. (HIGH)
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (3)
+------------------------------
+ There are 3 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (12)
+--------------------------------
+ There are 12 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+        inf        0.000                      0                  199          inf        0.000                      0                  199           NA           NA                      NA                    NA  
+
+
+There are no user specified timing constraints.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+(none)                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  
+  To Clock:  
+
+Max Delay           199 Endpoints
+Min Delay           199 Endpoints
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_0
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.884ns  (logic 13.387ns (40.711%)  route 19.497ns (59.289%))
+  Logic Levels:           36  (CARRY4=16 FDCE=1 LUT2=5 LUT3=3 LUT4=3 LUT5=1 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.800    19.924    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X60Y17         LUT2 (Prop_lut2_I0_O)        0.124    20.048 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    20.048    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_6_n_0
+    SLICE_X60Y17         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    20.581 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.581    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_n_0
+    SLICE_X60Y18         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    20.820 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__1/O[2]
+                         net (fo=2, routed)           0.966    21.785    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__1_n_5
+    SLICE_X61Y16         LUT2 (Prop_lut2_I1_O)        0.301    22.086 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_i_2/O
+                         net (fo=1, routed)           0.000    22.086    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_i_2_n_0
+    SLICE_X61Y16         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    22.487 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry/CO[3]
+                         net (fo=1, routed)           0.000    22.487    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_n_0
+    SLICE_X61Y17         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    22.709 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry__0/O[0]
+                         net (fo=8, routed)           1.016    23.725    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry__0_n_7
+    SLICE_X65Y16         LUT6 (Prop_lut6_I5_O)        0.299    24.024 f  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_9/O
+                         net (fo=4, routed)           1.098    25.123    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_9_n_0
+    SLICE_X64Y19         LUT3 (Prop_lut3_I2_O)        0.146    25.269 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_22/O
+                         net (fo=1, routed)           0.737    26.005    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_22_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I5_O)        0.328    26.333 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_7/O
+                         net (fo=7, routed)           1.027    27.360    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_7_n_0
+    SLICE_X65Y18         LUT6 (Prop_lut6_I5_O)        0.124    27.484 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.869    29.353    n_CATODS_0_OBUF
+    U7                   OBUF (Prop_obuf_I_O)         3.531    32.884 r  n_CATODS_0_OBUF_inst/O
+                         net (fo=0)                   0.000    32.884    n_CATODS_0
+    U7                                                                r  n_CATODS_0 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_6
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.663ns  (logic 13.367ns (40.923%)  route 19.296ns (59.077%))
+  Logic Levels:           36  (CARRY4=16 FDCE=1 LUT2=5 LUT3=3 LUT4=3 LUT5=1 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.800    19.924    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X60Y17         LUT2 (Prop_lut2_I0_O)        0.124    20.048 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    20.048    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_6_n_0
+    SLICE_X60Y17         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    20.581 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.581    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_n_0
+    SLICE_X60Y18         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    20.820 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__1/O[2]
+                         net (fo=2, routed)           0.966    21.785    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__1_n_5
+    SLICE_X61Y16         LUT2 (Prop_lut2_I1_O)        0.301    22.086 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_i_2/O
+                         net (fo=1, routed)           0.000    22.086    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_i_2_n_0
+    SLICE_X61Y16         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    22.487 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry/CO[3]
+                         net (fo=1, routed)           0.000    22.487    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_n_0
+    SLICE_X61Y17         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    22.709 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry__0/O[0]
+                         net (fo=8, routed)           1.016    23.725    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry__0_n_7
+    SLICE_X65Y16         LUT6 (Prop_lut6_I5_O)        0.299    24.024 f  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_9/O
+                         net (fo=4, routed)           1.098    25.123    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_9_n_0
+    SLICE_X64Y19         LUT3 (Prop_lut3_I2_O)        0.146    25.269 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_22/O
+                         net (fo=1, routed)           0.737    26.005    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_22_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I5_O)        0.328    26.333 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_7/O
+                         net (fo=7, routed)           0.842    27.175    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_7_n_0
+    SLICE_X65Y19         LUT6 (Prop_lut6_I3_O)        0.124    27.299 r  CIRCUIT_0/ssd_1/C1/n_CATODS_6_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.853    29.152    n_CATODS_6_OBUF
+    W7                   OBUF (Prop_obuf_I_O)         3.511    32.663 r  n_CATODS_6_OBUF_inst/O
+                         net (fo=0)                   0.000    32.663    n_CATODS_6
+    W7                                                                r  n_CATODS_6 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_3
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.637ns  (logic 13.392ns (41.032%)  route 19.245ns (58.968%))
+  Logic Levels:           36  (CARRY4=16 FDCE=1 LUT2=5 LUT3=3 LUT4=3 LUT5=1 LUT6=6 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.800    19.924    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X60Y17         LUT2 (Prop_lut2_I0_O)        0.124    20.048 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    20.048    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_6_n_0
+    SLICE_X60Y17         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    20.581 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.581    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_n_0
+    SLICE_X60Y18         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    20.820 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__1/O[2]
+                         net (fo=2, routed)           0.966    21.785    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__1_n_5
+    SLICE_X61Y16         LUT2 (Prop_lut2_I1_O)        0.301    22.086 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_i_2/O
+                         net (fo=1, routed)           0.000    22.086    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_i_2_n_0
+    SLICE_X61Y16         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401    22.487 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry/CO[3]
+                         net (fo=1, routed)           0.000    22.487    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry_n_0
+    SLICE_X61Y17         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    22.709 r  CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry__0/O[0]
+                         net (fo=8, routed)           1.016    23.725    CIRCUIT_0/ssd_1/C1/DIGIT21__13_carry__0_n_7
+    SLICE_X65Y16         LUT6 (Prop_lut6_I5_O)        0.299    24.024 f  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_9/O
+                         net (fo=4, routed)           1.098    25.123    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_9_n_0
+    SLICE_X64Y19         LUT3 (Prop_lut3_I2_O)        0.146    25.269 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_22/O
+                         net (fo=1, routed)           0.737    26.005    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_22_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I5_O)        0.328    26.333 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_7/O
+                         net (fo=7, routed)           0.840    27.173    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_7_n_0
+    SLICE_X65Y19         LUT6 (Prop_lut6_I3_O)        0.124    27.297 r  CIRCUIT_0/ssd_1/C1/n_CATODS_3_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.804    29.101    n_CATODS_3_OBUF
+    V8                   OBUF (Prop_obuf_I_O)         3.536    32.637 r  n_CATODS_3_OBUF_inst/O
+                         net (fo=0)                   0.000    32.637    n_CATODS_3
+    V8                                                                r  n_CATODS_3 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_1
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.396ns  (logic 12.873ns (39.737%)  route 19.523ns (60.263%))
+  Logic Levels:           35  (CARRY4=15 FDCE=1 LUT2=4 LUT3=2 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.980    20.104    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X61Y19         LUT2 (Prop_lut2_I0_O)        0.124    20.228 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    20.228    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3_n_0
+    SLICE_X61Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.778 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.778    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_n_0
+    SLICE_X61Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    21.112 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1/O[1]
+                         net (fo=13, routed)          1.066    22.178    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1_n_6
+    SLICE_X59Y19         LUT5 (Prop_lut5_I3_O)        0.303    22.481 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2/O
+                         net (fo=2, routed)           1.004    23.485    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2_n_0
+    SLICE_X58Y19         LUT6 (Prop_lut6_I0_O)        0.124    23.609 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    23.609    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6_n_0
+    SLICE_X58Y19         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    24.007 f  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0/CO[3]
+                         net (fo=1, routed)           0.966    24.973    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_n_0
+    SLICE_X60Y19         LUT6 (Prop_lut6_I0_O)        0.124    25.097 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13/O
+                         net (fo=4, routed)           0.835    25.932    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I4_O)        0.124    26.056 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_5/O
+                         net (fo=7, routed)           0.827    26.883    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_5_n_0
+    SLICE_X65Y19         LUT6 (Prop_lut6_I2_O)        0.124    27.007 r  CIRCUIT_0/ssd_1/C1/n_CATODS_1_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.859    28.867    n_CATODS_1_OBUF
+    W6                   OBUF (Prop_obuf_I_O)         3.529    32.396 r  n_CATODS_1_OBUF_inst/O
+                         net (fo=0)                   0.000    32.396    n_CATODS_1
+    W6                                                                r  n_CATODS_1 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_2
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.254ns  (logic 12.879ns (39.930%)  route 19.375ns (60.070%))
+  Logic Levels:           35  (CARRY4=15 FDCE=1 LUT2=4 LUT3=2 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.980    20.104    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X61Y19         LUT2 (Prop_lut2_I0_O)        0.124    20.228 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    20.228    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3_n_0
+    SLICE_X61Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.778 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.778    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_n_0
+    SLICE_X61Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    21.112 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1/O[1]
+                         net (fo=13, routed)          1.066    22.178    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1_n_6
+    SLICE_X59Y19         LUT5 (Prop_lut5_I3_O)        0.303    22.481 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2/O
+                         net (fo=2, routed)           1.004    23.485    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2_n_0
+    SLICE_X58Y19         LUT6 (Prop_lut6_I0_O)        0.124    23.609 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    23.609    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6_n_0
+    SLICE_X58Y19         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    24.007 f  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0/CO[3]
+                         net (fo=1, routed)           0.966    24.973    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_n_0
+    SLICE_X60Y19         LUT6 (Prop_lut6_I0_O)        0.124    25.097 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13/O
+                         net (fo=4, routed)           0.835    25.932    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I4_O)        0.124    26.056 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_5/O
+                         net (fo=7, routed)           0.826    26.882    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_5_n_0
+    SLICE_X65Y19         LUT6 (Prop_lut6_I1_O)        0.124    27.006 r  CIRCUIT_0/ssd_1/C1/n_CATODS_2_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.712    28.719    n_CATODS_2_OBUF
+    U8                   OBUF (Prop_obuf_I_O)         3.535    32.254 r  n_CATODS_2_OBUF_inst/O
+                         net (fo=0)                   0.000    32.254    n_CATODS_2
+    U8                                                                r  n_CATODS_2 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_4
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.210ns  (logic 12.864ns (39.938%)  route 19.346ns (60.062%))
+  Logic Levels:           35  (CARRY4=15 FDCE=1 LUT2=4 LUT3=2 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.980    20.104    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X61Y19         LUT2 (Prop_lut2_I0_O)        0.124    20.228 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    20.228    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3_n_0
+    SLICE_X61Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.778 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.778    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_n_0
+    SLICE_X61Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    21.112 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1/O[1]
+                         net (fo=13, routed)          1.066    22.178    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1_n_6
+    SLICE_X59Y19         LUT5 (Prop_lut5_I3_O)        0.303    22.481 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2/O
+                         net (fo=2, routed)           1.004    23.485    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2_n_0
+    SLICE_X58Y19         LUT6 (Prop_lut6_I0_O)        0.124    23.609 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    23.609    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6_n_0
+    SLICE_X58Y19         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    24.007 f  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0/CO[3]
+                         net (fo=1, routed)           0.966    24.973    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_n_0
+    SLICE_X60Y19         LUT6 (Prop_lut6_I0_O)        0.124    25.097 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13/O
+                         net (fo=4, routed)           0.835    25.932    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I4_O)        0.124    26.056 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_5/O
+                         net (fo=7, routed)           0.984    27.040    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_5_n_0
+    SLICE_X65Y18         LUT6 (Prop_lut6_I0_O)        0.124    27.164 r  CIRCUIT_0/ssd_1/C1/n_CATODS_4_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.525    28.690    n_CATODS_4_OBUF
+    U5                   OBUF (Prop_obuf_I_O)         3.520    32.210 r  n_CATODS_4_OBUF_inst/O
+                         net (fo=0)                   0.000    32.210    n_CATODS_4
+    U5                                                                r  n_CATODS_4 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            n_CATODS_5
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        32.152ns  (logic 12.848ns (39.961%)  route 19.304ns (60.039%))
+  Logic Levels:           35  (CARRY4=15 FDCE=1 LUT2=4 LUT3=2 LUT4=3 LUT5=2 LUT6=7 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y27         FDCE                         0.000     0.000 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/C
+    SLICE_X65Y27         FDCE (Prop_fdce_C_Q)         0.456     0.456 r  CIRCUIT_0/control_unit_1/NUMBER_reg[0]/Q
+                         net (fo=11, routed)          1.292     1.748    CIRCUIT_0/control_unit_1/S[0]
+    SLICE_X63Y24         LUT2 (Prop_lut2_I0_O)        0.124     1.872 r  CIRCUIT_0/control_unit_1/DIGIT41_carry_i_2/O
+                         net (fo=1, routed)           0.000     1.872    CIRCUIT_0/ssd_1/C1/S[2]
+    SLICE_X63Y24         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398     2.270 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry/CO[3]
+                         net (fo=1, routed)           0.009     2.279    CIRCUIT_0/ssd_1/C1/DIGIT41_carry_n_0
+    SLICE_X63Y25         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.393 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0/CO[3]
+                         net (fo=1, routed)           0.000     2.393    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__0_n_0
+    SLICE_X63Y26         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.507 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     2.507    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__1_n_0
+    SLICE_X63Y27         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.621 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2/CO[3]
+                         net (fo=1, routed)           0.000     2.621    CIRCUIT_0/ssd_1/C1/DIGIT41_carry__2_n_0
+    SLICE_X63Y28         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.843 r  CIRCUIT_0/ssd_1/C1/DIGIT41_carry__3/O[0]
+                         net (fo=9, routed)           0.808     3.651    CIRCUIT_0/ssd_1/C1/NUMBER_reg[14][1]
+    SLICE_X64Y26         LUT2 (Prop_lut2_I0_O)        0.299     3.950 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3/O
+                         net (fo=2, routed)           0.431     4.381    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_3_n_0
+    SLICE_X61Y26         LUT4 (Prop_lut4_I0_O)        0.124     4.505 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6/O
+                         net (fo=1, routed)           0.000     4.505    CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry_i_6_n_0
+    SLICE_X61Y26         CARRY4 (Prop_carry4_S[1]_O[2])
+                                                      0.580     5.085 r  CIRCUIT_0/ssd_1/C1/DIGIT41__33_carry/O[2]
+                         net (fo=1, routed)           0.809     5.894    CIRCUIT_0/control_unit_1/DIGIT41__47_carry__2[2]
+    SLICE_X59Y26         LUT2 (Prop_lut2_I1_O)        0.302     6.196 r  CIRCUIT_0/control_unit_1/DIGIT41__47_carry__1_i_1/O
+                         net (fo=1, routed)           0.000     6.196    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__0_0[3]
+    SLICE_X59Y26         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     6.597 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1/CO[3]
+                         net (fo=1, routed)           0.000     6.597    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__1_n_0
+    SLICE_X59Y27         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.931 r  CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2/O[1]
+                         net (fo=20, routed)          1.133     8.064    CIRCUIT_0/ssd_1/C1/DIGIT41__47_carry__2_n_6
+    SLICE_X62Y24         CARRY4 (Prop_carry4_S[1]_CO[2])
+                                                      0.873     8.937 r  CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1/CO[2]
+                         net (fo=89, routed)          1.589    10.526    CIRCUIT_0/ssd_1/C1/DIGIT41__85_carry__1_n_1
+    SLICE_X61Y23         LUT3 (Prop_lut3_I1_O)        0.339    10.865 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8/O
+                         net (fo=15, routed)          1.202    12.067    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_8_n_0
+    SLICE_X62Y20         LUT6 (Prop_lut6_I0_O)        0.326    12.393 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1/O
+                         net (fo=10, routed)          0.621    13.013    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_1_n_0
+    SLICE_X65Y22         LUT6 (Prop_lut6_I0_O)        0.124    13.137 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5/O
+                         net (fo=1, routed)           0.000    13.137    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_i_5_n_0
+    SLICE_X65Y22         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.248    13.385 r  CIRCUIT_0/ssd_1/C1/DIGIT31_carry/O[2]
+                         net (fo=3, routed)           0.825    14.210    CIRCUIT_0/ssd_1/C1/DIGIT31_carry_n_5
+    SLICE_X64Y23         LUT4 (Prop_lut4_I3_O)        0.302    14.512 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    14.512    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_i_3_n_0
+    SLICE_X64Y23         CARRY4 (Prop_carry4_S[2]_O[2])
+                                                      0.250    14.762 r  CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0/O[2]
+                         net (fo=1, routed)           0.926    15.688    CIRCUIT_0/ssd_1/C1/DIGIT31__10_carry__0_n_5
+    SLICE_X59Y23         LUT4 (Prop_lut4_I3_O)        0.301    15.989 r  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5/O
+                         net (fo=1, routed)           0.000    15.989    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_i_5_n_0
+    SLICE_X59Y23         CARRY4 (Prop_carry4_S[0]_O[0])
+                                                      0.247    16.236 f  CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1/O[0]
+                         net (fo=8, routed)           0.913    17.149    CIRCUIT_0/ssd_1/C1/DIGIT31__28_carry__1_n_7
+    SLICE_X58Y20         LUT6 (Prop_lut6_I0_O)        0.299    17.448 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5/O
+                         net (fo=10, routed)          0.768    18.217    CIRCUIT_0/ssd_1/C1/DIGIT21_carry_i_5_n_0
+    SLICE_X59Y20         LUT3 (Prop_lut3_I1_O)        0.124    18.341 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9/O
+                         net (fo=2, routed)           0.659    19.000    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_9_n_0
+    SLICE_X59Y20         LUT5 (Prop_lut5_I3_O)        0.124    19.124 r  CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3/O
+                         net (fo=10, routed)          0.980    20.104    CIRCUIT_0/ssd_1/C1/DIGIT21_carry__0_i_3_n_0
+    SLICE_X61Y19         LUT2 (Prop_lut2_I0_O)        0.124    20.228 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3/O
+                         net (fo=1, routed)           0.000    20.228    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_i_3_n_0
+    SLICE_X61Y19         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    20.778 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0/CO[3]
+                         net (fo=1, routed)           0.000    20.778    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__0_n_0
+    SLICE_X61Y20         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    21.112 r  CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1/O[1]
+                         net (fo=13, routed)          1.066    22.178    CIRCUIT_0/ssd_1/C1/DIGIT30_carry__1_n_6
+    SLICE_X59Y19         LUT5 (Prop_lut5_I3_O)        0.303    22.481 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2/O
+                         net (fo=2, routed)           1.004    23.485    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_2_n_0
+    SLICE_X58Y19         LUT6 (Prop_lut6_I0_O)        0.124    23.609 r  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6/O
+                         net (fo=1, routed)           0.000    23.609    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_i_6_n_0
+    SLICE_X58Y19         CARRY4 (Prop_carry4_S[2]_CO[3])
+                                                      0.398    24.007 f  CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0/CO[3]
+                         net (fo=1, routed)           0.966    24.973    CIRCUIT_0/ssd_1/C1/DIGIT30__14_carry__0_n_0
+    SLICE_X60Y19         LUT6 (Prop_lut6_I0_O)        0.124    25.097 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13/O
+                         net (fo=4, routed)           0.834    25.931    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_13_n_0
+    SLICE_X63Y19         LUT6 (Prop_lut6_I1_O)        0.124    26.055 r  CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_3/O
+                         net (fo=7, routed)           0.794    26.849    CIRCUIT_0/ssd_1/C1/n_CATODS_0_OBUF_inst_i_3_n_0
+    SLICE_X65Y18         LUT6 (Prop_lut6_I0_O)        0.124    26.973 r  CIRCUIT_0/ssd_1/C1/n_CATODS_5_OBUF_inst_i_1/O
+                         net (fo=1, routed)           1.674    28.648    n_CATODS_5_OBUF
+    V5                   OBUF (Prop_obuf_I_O)         3.504    32.152 r  n_CATODS_5_OBUF_inst/O
+                         net (fo=0)                   0.000    32.152    n_CATODS_5
+    V5                                                                r  n_CATODS_5 (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RST_0
+                            (input port)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[10]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.460ns  (logic 1.580ns (21.183%)  route 5.879ns (78.817%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 r  RST_0 (IN)
+                         net (fo=0)                   0.000     0.000    RST_0
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 r  RST_0_IBUF_inst/O
+                         net (fo=5, routed)           1.784     3.240    CIRCUIT_0/ps2_interface_1/RST_0_IBUF
+    SLICE_X63Y34         LUT1 (Prop_lut1_I0_O)        0.124     3.364 f  CIRCUIT_0/ps2_interface_1/REGISTER_FULL_i_2/O
+                         net (fo=65, routed)          4.095     7.460    CIRCUIT_0/ps2_interface_1/p_0_in
+    SLICE_X15Y94         FDCE                                         f  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[10]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RST_0
+                            (input port)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[11]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.460ns  (logic 1.580ns (21.183%)  route 5.879ns (78.817%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 r  RST_0 (IN)
+                         net (fo=0)                   0.000     0.000    RST_0
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 r  RST_0_IBUF_inst/O
+                         net (fo=5, routed)           1.784     3.240    CIRCUIT_0/ps2_interface_1/RST_0_IBUF
+    SLICE_X63Y34         LUT1 (Prop_lut1_I0_O)        0.124     3.364 f  CIRCUIT_0/ps2_interface_1/REGISTER_FULL_i_2/O
+                         net (fo=65, routed)          4.095     7.460    CIRCUIT_0/ps2_interface_1/p_0_in
+    SLICE_X15Y94         FDCE                                         f  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[11]/CLR
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 RST_0
+                            (input port)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[12]/CLR
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        7.460ns  (logic 1.580ns (21.183%)  route 5.879ns (78.817%))
+  Logic Levels:           2  (IBUF=1 LUT1=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R2                                                0.000     0.000 r  RST_0 (IN)
+                         net (fo=0)                   0.000     0.000    RST_0
+    R2                   IBUF (Prop_ibuf_I_O)         1.456     1.456 r  RST_0_IBUF_inst/O
+                         net (fo=5, routed)           1.784     3.240    CIRCUIT_0/ps2_interface_1/RST_0_IBUF
+    SLICE_X63Y34         LUT1 (Prop_lut1_I0_O)        0.124     3.364 f  CIRCUIT_0/ps2_interface_1/REGISTER_FULL_i_2/O
+                         net (fo=65, routed)          4.095     7.460    CIRCUIT_0/ps2_interface_1/p_0_in
+    SLICE_X15Y94         FDCE                                         f  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[12]/CLR
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[13]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[14]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.258ns  (logic 0.146ns (56.588%)  route 0.112ns (43.412%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y94         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[13]/C
+    SLICE_X15Y94         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[13]/Q
+                         net (fo=1, routed)           0.112     0.258    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg_n_0_[13]
+    SLICE_X14Y94         FDCE                                         r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[34]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[35]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.258ns  (logic 0.146ns (56.588%)  route 0.112ns (43.412%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X53Y43         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[34]/C
+    SLICE_X53Y43         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[34]/Q
+                         net (fo=1, routed)           0.112     0.258    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg_n_0_[34]
+    SLICE_X52Y43         FDCE                                         r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[35]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[26]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[27]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.264ns  (logic 0.146ns (55.332%)  route 0.118ns (44.668%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X41Y61         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[26]/C
+    SLICE_X41Y61         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[26]/Q
+                         net (fo=1, routed)           0.118     0.264    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg_n_0_[26]
+    SLICE_X40Y61         FDCE                                         r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[27]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/IS_LEFT_PRESSED_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.289ns  (logic 0.191ns (66.042%)  route 0.098ns (33.958%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y29         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/C
+    SLICE_X61Y29         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/Q
+                         net (fo=3, routed)           0.098     0.244    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER[41]
+    SLICE_X60Y29         LUT3 (Prop_lut3_I0_O)        0.045     0.289 r  CIRCUIT_0/ps2_interface_1/IS_LEFT_PRESSED_i_1/O
+                         net (fo=1, routed)           0.000     0.289    CIRCUIT_0/ps2_interface_1/IS_LEFT_PRESSED_i_1_n_0
+    SLICE_X60Y29         FDRE                                         r  CIRCUIT_0/ps2_interface_1/IS_LEFT_PRESSED_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/LEFT_CLICK_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.292ns  (logic 0.194ns (66.391%)  route 0.098ns (33.609%))
+  Logic Levels:           2  (FDCE=1 LUT3=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y29         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/C
+    SLICE_X61Y29         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/Q
+                         net (fo=3, routed)           0.098     0.244    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER[41]
+    SLICE_X60Y29         LUT3 (Prop_lut3_I2_O)        0.048     0.292 r  CIRCUIT_0/ps2_interface_1/LEFT_CLICK_i_1/O
+                         net (fo=1, routed)           0.000     0.292    CIRCUIT_0/ps2_interface_1/LEFT_CLICK_i_1_n_0
+    SLICE_X60Y29         FDRE                                         r  CIRCUIT_0/ps2_interface_1/LEFT_CLICK_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/RIGHT_CLICK_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.296ns  (logic 0.194ns (65.495%)  route 0.102ns (34.505%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y29         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/C
+    SLICE_X61Y29         FDCE (Prop_fdce_C_Q)         0.146     0.146 f  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[41]/Q
+                         net (fo=3, routed)           0.102     0.248    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER[41]
+    SLICE_X60Y29         LUT5 (Prop_lut5_I3_O)        0.048     0.296 r  CIRCUIT_0/ps2_interface_1/RIGHT_CLICK_i_1/O
+                         net (fo=1, routed)           0.000     0.296    CIRCUIT_0/ps2_interface_1/RIGHT_CLICK_i_1_n_0
+    SLICE_X60Y29         FDRE                                         r  CIRCUIT_0/ps2_interface_1/RIGHT_CLICK_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.300ns  (logic 0.191ns (63.578%)  route 0.109ns (36.422%))
+  Logic Levels:           2  (FDCE=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y30         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]/C
+    SLICE_X61Y30         FDCE (Prop_fdce_C_Q)         0.146     0.146 f  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]/Q
+                         net (fo=7, routed)           0.109     0.255    CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]
+    SLICE_X60Y30         LUT5 (Prop_lut5_I4_O)        0.045     0.300 r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS[0]_i_1/O
+                         net (fo=1, routed)           0.000     0.300    CIRCUIT_0/ps2_interface_1/p_0_in__0[0]
+    SLICE_X60Y30         FDCE                                         r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/REGISTER_FULL_reg/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.300ns  (logic 0.191ns (63.578%)  route 0.109ns (36.422%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y30         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[3]/C
+    SLICE_X61Y30         FDCE (Prop_fdce_C_Q)         0.146     0.146 r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[3]/Q
+                         net (fo=7, routed)           0.109     0.255    CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[3]
+    SLICE_X60Y30         LUT6 (Prop_lut6_I5_O)        0.045     0.300 r  CIRCUIT_0/ps2_interface_1/REGISTER_FULL_i_1/O
+                         net (fo=1, routed)           0.000     0.300    CIRCUIT_0/ps2_interface_1/eqOp
+    SLICE_X60Y30         FDCE                                         r  CIRCUIT_0/ps2_interface_1/REGISTER_FULL_reg/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[4]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.302ns  (logic 0.191ns (63.158%)  route 0.111ns (36.842%))
+  Logic Levels:           2  (FDCE=1 LUT6=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y30         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]/C
+    SLICE_X61Y30         FDCE (Prop_fdce_C_Q)         0.146     0.146 f  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]/Q
+                         net (fo=7, routed)           0.111     0.257    CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[5]
+    SLICE_X60Y30         LUT6 (Prop_lut6_I5_O)        0.045     0.302 r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS[4]_i_1/O
+                         net (fo=1, routed)           0.000     0.302    CIRCUIT_0/ps2_interface_1/p_0_in__0[4]
+    SLICE_X60Y30         FDCE                                         r  CIRCUIT_0/ps2_interface_1/MOUSE_BITS_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[9]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[10]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.312ns  (logic 0.167ns (53.502%)  route 0.145ns (46.498%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y94         FDCE                         0.000     0.000 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[9]/C
+    SLICE_X14Y94         FDCE (Prop_fdce_C_Q)         0.167     0.167 r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[9]/Q
+                         net (fo=1, routed)           0.145     0.312    CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg_n_0_[9]
+    SLICE_X15Y94         FDCE                                         r  CIRCUIT_0/ps2_interface_1/MOUSE_REGISTER_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
